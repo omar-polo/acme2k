@@ -13,8 +13,8 @@
  */
 
 char *fontnames[2] = {
-	"/lib/font/bit/profont/profont-12.font",
-	"/lib/font/bit/mntcarlo/mntcarlo.font"
+	"/home/yumh/plan9/font/fixed/unicode.8x13.font",
+	"/home/yumh/plan9/font/lucsans/euro.8.font"
 };
 
 /*
@@ -23,6 +23,7 @@ char *fontnames[2] = {
  *
  *  comes highly suggested.
  */
+
 
 int globalautoindent	= TRUE;
 
@@ -41,7 +42,7 @@ int	swapscrollbuttons	= FALSE;
  *  comes highly suggested.
  */
 
-int bartflag			= TRUE;
+int bartflag			= FALSE;
 
 /*
  *  colors-constants. now let me take a minute to explain
@@ -62,20 +63,42 @@ int bartflag			= TRUE;
  *  buttons highlight background.
  */
 
-#define C_TAGBG			0xFFFFFFFF
-#define C_TAGFG			0x000000FF
-#define C_TAGHLBG		0x999999FF
-#define C_TAGHLFG		0x000000FF
+#ifdef ACME2KCS
+# define C_TAGBG		0xFFFFFFFF
+# define C_TAGFG		0x000000FF
+# define C_TAGHLBG		0x999999FF
+# define C_TAGHLFG		0x000000FF
 
-#define C_TXTBG			0xFFFFFFFF
-#define C_TXTFG			0x000000FF
-#define C_TXTHLBG		0x999999FF
-#define C_TXTHLFG		0x000000FF
+# define C_TXTBG		0xFFFFFFFF
+# define C_TXTFG		0x000000FF
+# define C_TXTHLBG		0x999999FF
+# define C_TXTHLFG		0x000000FF
 
-#define C_WINBUTTON		0x4d4d4dFF
-#define C_COLBUTTON		0x55aaaaFF
-#define C_TMPBUTTON		0x55aaaaFF
-#define C_SCROLLBG		0x999999FF
+# define C_WINBUTTON	0x4d4d4dFF
+# define C_COLBUTTON	0x55aaaaFF
+# define C_TMPBUTTON	0x55aaaaFF
+# define C_SCROLLBG		0x999999FF
 
-#define C_BUTTON2HL		0x55aaaaFF
-#define C_BUTTON3HL		0x55aaaaFF
+# define C_BUTTON2HL	0x55aaaaFF
+# define C_BUTTON3HL	0x55aaaaFF
+
+#else
+
+# define C_TAGBG		0xEFFFFFFF
+# define C_TAGFG		0x000000FF
+# define C_TAGHLBG		0x9EEEEEFF
+# define C_TAGHLFG		0x000000FF
+
+# define C_TXTBG		0xFFFFEAFF
+# define C_TXTFG		0x000000FF
+# define C_TXTHLBG		0xEEEE9EFF
+# define C_TXTHLFG		0x000000FF
+
+# define C_WINBUTTON	0x8888CCFF
+# define C_COLBUTTON	0x8C8ACEFF
+# define C_TMPBUTTON	0x000099FF
+# define C_SCROLLBG		0x9C9A4AFF
+
+# define C_BUTTON2HL	0x55aaaaFF
+# define C_BUTTON3HL	0x55aaaaFF
+#endif
