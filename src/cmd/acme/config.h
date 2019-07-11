@@ -74,13 +74,13 @@ int bartflag			= FALSE;
 # define C_TXTHLBG		0x999999FF
 # define C_TXTHLFG		0x000000FF
 
-# define C_WINBUTTON	0x4d4d4dFF
-# define C_COLBUTTON	0x55aaaaFF
-# define C_TMPBUTTON	0x55aaaaFF
+# define C_WINBUTTON		0x4d4d4dFF
+# define C_COLBUTTON		0x55aaaaFF
+# define C_TMPBUTTON		0x55aaaaFF
 # define C_SCROLLBG		0x999999FF
 
-# define C_BUTTON2HL	0x55aaaaFF
-# define C_BUTTON3HL	0x55aaaaFF
+# define C_BUTTON2HL		0x55aaaaFF
+# define C_BUTTON3HL		0x55aaaaFF
 
 #else
 
@@ -94,11 +94,11 @@ int bartflag			= FALSE;
 # define C_TXTHLBG		0xEEEE9EFF
 # define C_TXTHLFG		0x000000FF
 
-# define C_WINBUTTON	0x8888CCFF
-# define C_COLBUTTON	0x8C8ACEFF
-# define C_TMPBUTTON	0x000099FF
+# define C_WINBUTTON		0x8888CCFF
+# define C_COLBUTTON		0x8C8ACEFF
+# define C_TMPBUTTON		0x000099FF
 # define C_SCROLLBG		0x9C9A4AFF
 
-# define C_BUTTON2HL	0x55aaaaFF
-# define C_BUTTON3HL	0x55aaaaFF
+# define C_BUTTON2HL		0x55aaaaFF
+# define C_BUTTON3HL		0x55aaaaFF
 #endif
