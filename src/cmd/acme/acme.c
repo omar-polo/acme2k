@@ -152,7 +152,7 @@ threadmain(int argc, char *argv[])
 		free(p);
 	}
 	if(maxtab == 0)
-		maxtab = 4;
+		maxtab = 8;
 	if(loadfile)
 		rowloadfonts(loadfile);
 	putenv("font", fontnames[0]);
