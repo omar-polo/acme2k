@@ -819,6 +819,10 @@ texttype(Text *t, Rune r)
 	 	typecommit(t);
 		undo(t, nil, nil, FALSE, 0, nil, 0);
 		return;
+	case 0x13:	/* Ctrl-S: put */
+		typecommit(t);
+		put(t, nil, nil, FALSE, 0, nil, 0);
+		return;
 
 	Tagdown:
 		/* expand tag to show all text */
@@ -929,7 +933,6 @@ texttype(Text *t, Rune r)
 		
 	case 0x08:	/* ^H: erase character */
 	case 0x15:	/* ^U: erase line */
-	case 0x7F:
 	case 0x17:	/* ^W: erase  word */
 		if(t->q0 == 0)	/* nothing to erase */
 			return;
